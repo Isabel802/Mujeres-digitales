@@ -1,0 +1,8 @@
+Introducción
+HTML:Para maquetar.JS.CSS -> FRONTEND:Diseño,agregar campos,validación.
+ANGULAR
+JS -> ARRAYS => FORMATO JSON
+-------------->BACKEND
+MONGO
+EXPRESS
+NODE: Nació por parte de Google
