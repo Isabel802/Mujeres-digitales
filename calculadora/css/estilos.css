@@ -1,0 +1,143 @@
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: 'Muli', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    height: 100vh;
+    display: flex;
+}
+[data-theme="dark"] {
+    --primary-color: #ffffff;
+    --bg-color: #000000;
+    --secondary-color: #ff3366;
+}
+.Calculadora {
+    background-color: #ededed;
+    width: fit-content;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 1.5%;
+  }
+.rs {
+    padding: 0px 18px 18px 18px;
+}
+.rs button {
+    width: 100%;
+    background-color:#FC40EC;
+    color: rgba(5, 3, 3, 0.863);
+    border: none;
+}
+.rs button:hover {
+    background-color: rgb(37, 35, 59);
+}
+.c {
+    padding: 0px 18px 18px 18px;
+}
+.c button {
+    width: 100%;
+    background-color:#FC40EC;
+    color: rgba(5, 3, 3, 0.863);
+    border: none;
+}
+.c button:hover {
+    background-color: rgb(37, 35, 59);
+}
+.teclas {
+    display: flex;
+}
+.pantalla {
+    padding: 18px 18px 0px 18px;
+}
+.numeros {
+    padding: 18px 9px 18px 18px;
+}
+.operaciones {
+    padding: 18px 18px 18px 9px;
+}
+#resultado {
+    padding: 15px;
+    background-color:  #797878;
+}
+.operaciones button {
+    display: block;
+    width: 54px;
+    height: 54px;
+    padding: 9px 15px;
+    background-color: #797878;
+    border: none;
+}
+.operaciones button:hover {
+    background-color: rgb(37, 35, 59);
+}
+.numeros div{
+    text-align: center;
+}
+.numeros button {
+    border: 0px;
+    background-color: #ffffff;
+}
+.numeros button:hover {
+    background-color: rgb(37, 35, 59);
+    color: #fff;
+}
+button {
+    margin: 2px 0px;
+    padding: 15px 23px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.theme-switch-wrapper{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.theme-switch {
+    display: block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.theme-switch input {
+    display: none;
+}
+.slider {
+    background-color: #000000;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    transition: .4s all;
+}
+.slider:before {
+    background-color: #ffffff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s all;
+    width: 26px;
+}
+/*Para que cambie de color el fondo de la calculadora*/
+input:checked + .slider {
+    background-color: #FC40EC;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: .25rem;
+}
+.slider.round:before {
+    border-radius: .25rem;
+}
