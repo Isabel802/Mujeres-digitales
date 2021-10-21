@@ -1,0 +1,19 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.1",
+  "description": "Aplicación sobre práctica de node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Maria Isabel Cerquera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "mongoose": "^6.0.11",
+    "nodemailer": "^6.7.0",
+    "nodemon": "^2.0.13"
+  }
+}
