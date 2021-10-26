@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <title>Práctica Grid</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Mi aplicación</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link" href="#">Registro</a>
+              <a class="nav-link" href="login.html">Login</a>
+              <a class="nav-link" href="#">Activar</a>
+              <a class="nav-link" href="#">Recuperar</a>
+              <a class="nav-link" href="http://127.0.0.1:3001/Usuarios/ListarXLS">Descargar usuarios</a>
+              <a class="nav-link" href="usuarios.html">Usuarios</a>
+            </div>
+          </div>
+        </nav>
+      <script>
+      var nuevafuncion = function(){
+      var data = "nombre=pruebaaaaa";
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+          console.log(this.responseText);
+        }
+      });
+      xhr.open("POST", "http://localhost:3001/mipost");
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send(data);
+      }
+    </script>
+      <div class="container">
+        <div onclick=nuevafuncion()>Nueva función</div>
+        <form action="/Usuarios/Activar/jhones" method="GET"> <!--Url que se está utilizando y el método se coloca POST ejemplo que se paso a GET--> 
+          <label for="fname">Nombre:</label><br>
+          <input type="text" id="fname" name="nombre" value="John"><br><!--Se coloca nombre ya que debe coincidir con el POSTMAN--> 
+          <input type="submit" value="Submit">
+        </form>
+        <a href="/Usuarios/Activar/jhones">Clic aquí</a> <!--Se hace para la petición de activar--> 
+      </div>
+      <!-- Optional JavaScript; choose one of the two! -->
+      <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+      <!--
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+      -->
+  </body>
+</html>
